@@ -9,7 +9,8 @@ public class Main {
         int month = 0;
 
         while (total <= requiredSum) {
-            total = total + amount;
+            total += total / 100;
+            total += amount;
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
@@ -83,7 +84,7 @@ public class Main {
 
         int firstFriday = 2; //число первой пятницы месяца
 
-        for (int dey = firstFriday; dey <= 31; dey = dey + 7) {
+        for (int dey = firstFriday; dey <= 31; dey += 7) {
             System.out.println("Сегодня пятница, " + dey + "-е число. Необходимо подготовить отчет");
         }
         // Task 8
@@ -95,7 +96,7 @@ public class Main {
         int last200 = currentYar - 200;//наблюдение до начала текущего года
         int next100 = currentYar + 100;// возможное наблюдение в будущем
 
-        for (int yar = observat; yar < next100; yar = yar + period) {
+        for (int yar = observat; yar < next100; yar += period) {
             if (yar > last200) {
                 System.out.println(yar);
             }
